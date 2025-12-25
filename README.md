@@ -168,6 +168,12 @@ java --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.trax=ALL-UNNAM
 ➡️ Уже предустановлены в **Kali Linux**
 (`/usr/share/wordlists`, `hydra`, `wfuzz`, `ffuf`, `burp intruder`)
 
+## 🔑 Stage 2 — Privilege Escalation
+
+**PortSwigger Lab: User role can be modified in user profile**
+Обращаем внимание на RoleId - брутим от 1 до 200, находится в функционале UpdateEmail
+
+
 ---
 
 ## 🧠 Итоговый Mindset (BSCP)
