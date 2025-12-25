@@ -171,7 +171,7 @@ java --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.trax=ALL-UNNAM
 ## 🔑 Stage 2 — Privilege Escalation
 
 **PortSwigger Lab: User role can be modified in user profile**
-Обращаем внимание на RoleId - брутим от 1 до 200, находится в функционале UpdateEmail
+* Обращаем внимание на RoleId - брутим от 1 до 200, находится в функционале UpdateEmail
 
 
 ---
